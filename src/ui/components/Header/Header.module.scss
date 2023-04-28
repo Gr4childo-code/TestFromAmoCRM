@@ -1,3 +1,4 @@
+@import '/src/styles/Media.scss';
 .header {
   padding-top: 46px;
   &__wrapper {
@@ -8,7 +9,6 @@
     display: flex;
     flex-direction: column;
     max-width: 140px;
-
     &__text {
       padding-top: 10px;
       font-family: var(--fonts-text);
@@ -38,6 +38,25 @@
         gap: 30px;
         display: flex;
       }
+    }
+  }
+}
+
+@include mq(Sphone) {
+  .header {
+    position: fixed;
+    background-color: var(--background);
+    padding: 0 16px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    &__center {
+      padding-left: 0;
+      flex-grow: 0;
+    }
+    &__left,
+    &__right {
+      display: none;
     }
   }
 }

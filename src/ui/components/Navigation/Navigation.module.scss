@@ -1,10 +1,30 @@
+@import '/src/styles/Media.scss';
+
 .navigation {
   display: flex;
   position: relative;
   &__links {
     display: flex;
     gap: 30px;
+    line-height: 19px;
     color: var(--white-text);
     font-family: var(--fonts-title);
+  }
+}
+
+@include mq(Sphone) {
+  .navigation {
+    &__links {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      gap: 16px;
+      text-transform: uppercase;
+      li {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
   }
 }

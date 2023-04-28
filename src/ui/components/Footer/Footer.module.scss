@@ -1,8 +1,10 @@
+@import '/src/styles/Media.scss';
+
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 315px;
+  height: 100%;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -36,6 +38,11 @@
       flex-wrap: wrap;
       max-width: 425px;
     }
+    &__ul.mobile {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
     &__items {
       padding: 5px 0;
       flex: 50%;
@@ -45,10 +52,14 @@
       font-size: 16px;
       line-height: 19px;
     }
+    &__items.mobile {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
   }
   &__contacts {
     text-align: right;
-
     .wrapper {
       display: flex;
       flex-direction: column;
@@ -93,6 +104,78 @@
         text-decoration-line: underline;
 
         color: var(--white-text);
+      }
+    }
+  }
+}
+
+@include mq(Sphone) {
+  .footer {
+    padding: 0 16px;
+    background-color: var(--background);
+    height: 100%;
+    &__wrapper {
+      flex-direction: column;
+    }
+    .title {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__company {
+      &__item {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &__menu {
+      padding-left: 0;
+
+      &__ul {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 425px;
+      }
+      &__ul.mobile {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: flex;
+        }
+      }
+      &__items {
+        flex: 50%;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &__contacts {
+      text-align: left;
+      .wrapper {
+        .contacts {
+          &:nth-child(2) {
+            gap: 10px;
+            align-self: auto;
+          }
+        }
+      }
+      &__adress {
+        text-align: left;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &__security {
+        padding-top: 50px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: left;
+        .politics {
+          text-align: left;
+          font-size: 12px;
+          line-height: 15px;
+          text-decoration-line: underline;
+          padding-bottom: 60px;
+        }
       }
     }
   }

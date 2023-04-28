@@ -1,0 +1,14 @@
+$grid-breakpoints: (
+  'Sphone': 320px,
+  'desktop': 1440px,
+) !default;
+
+@mixin mq($v) {
+  @each $name, $size in $grid-breakpoints {
+    @if $name == $v {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  }
+}

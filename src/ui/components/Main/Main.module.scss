@@ -1,3 +1,5 @@
+@import '/src/styles/Media.scss';
+
 .layout {
   padding-top: 93px;
   display: flex;
@@ -30,6 +32,9 @@
     }
   }
   &__right {
+    .about__mobile {
+      display: none;
+    }
     display: flex;
     flex-direction: column;
     max-width: 330px;
@@ -68,7 +73,7 @@
         padding-bottom: 30px;
         display: flex;
         flex-direction: column;
-        span {
+        .title {
           font-family: 'Inter';
           font-weight: 500;
           font-size: 18px;
@@ -99,6 +104,88 @@
       color: var(--white-text);
       outline: none;
       border: 0;
+    }
+  }
+}
+
+@include mq(Sphone) {
+  .layout {
+    padding-bottom: 55px;
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: radial-gradient(
+        238.53% 189.02% at 3.2% 3.49%,
+        rgba(255, 246, 233, 0.1) 0%,
+        rgba(26, 29, 35, 0.1) 26.62%,
+        rgba(26, 29, 35, 0.1) 52.1%,
+        rgba(26, 29, 35, 0.01) 70.17%,
+        rgba(26, 29, 35, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    // backdrop-filter: blur(7.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    flex-direction: column;
+    &__left {
+      .left__title {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      .left__subtitle {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      .left__text {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &__right {
+      padding-top: 45px;
+      .right__title {
+        text-align: left;
+        padding-bottom: 0;
+        .title {
+          background: linear-gradient(90deg, #fcb045 70%, #fd1d1d 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+      .about__mobile {
+        display: flex;
+        justify-content: space-around;
+        li::before {
+          content: ' ';
+          left: -10px;
+          top: -5px;
+          position: relative;
+          display: inline-block;
+          width: 10px;
+          height: 1px;
+          background: linear-gradient(90deg, #fcb045 70%, #fd1d1d 100%);
+        }
+        &__list {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          &__item {
+            font-family: 'Montserrat';
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--white-text);
+          }
+        }
+      }
+      .right__about,
+      .right__button {
+        display: none;
+      }
     }
   }
 }

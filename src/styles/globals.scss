@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import '/src/styles/Media.scss';
+
 :root {
   //Colors
   --white-text: rgb(228, 229, 234);
@@ -108,14 +110,58 @@ a {
 }
 .redlight {
   border-radius: 50%;
-
   position: absolute;
   width: 311px;
   height: 311px;
   left: 50px;
   top: 251px;
-
   background: #961a1a;
   opacity: 0.5;
   filter: blur(196px);
+}
+
+@include mq(Sphone) {
+  .redballSmall {
+    display: none;
+  }
+  .purplelight {
+    width: 180px;
+    height: 300px;
+    left: 130px;
+    top: 107px;
+  }
+  .redball {
+    width: 43px;
+    height: 43px;
+    left: 29px;
+    top: 470px;
+    filter: blur(5px);
+  }
+  .redlight {
+    left: -55px;
+    top: 241px;
+    width: 211px;
+    height: 210px;
+  }
+  .purpleBall {
+    border-radius: 50% 0 0 50%;
+    width: 30px;
+    height: 40px;
+    left: 290px;
+    top: 280px;
+  }
+  .yellowlight {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -66px;
+    top: 519px;
+
+    background: #fcb045;
+    opacity: 0.4;
+    filter: blur(196px);
+  }
+  .container {
+    padding: 0 0;
+  }
 }

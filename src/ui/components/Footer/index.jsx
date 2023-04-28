@@ -14,11 +14,25 @@ const Footer = () => {
           </div>
           <div className={styles.footer__menu}>
             <p className={styles.title}>Меню</p>
-            <ul className={styles.footer__menu__ul}>
+            <ul className={`${styles.footer__menu__ul} ${styles.mobile}`}>
               <li className={styles.footer__menu__items}>Расчет стоимости</li>
               <li className={styles.footer__menu__items}>Кейсы</li>
               <li className={styles.footer__menu__items}>Услуги</li>
               <li className={styles.footer__menu__items}>Благодарственные письма</li>
+              <li className={styles.footer__menu__items}>Виджеты</li>
+              <li className={styles.footer__menu__items}>Сертификаты</li>
+              <li className={styles.footer__menu__items}>Интеграции</li>
+              <li className={styles.footer__menu__items}>Блог на Youtube</li>
+              <li className={styles.footer__menu__items}>Наши клиенты</li>
+              <li className={styles.footer__menu__items}>Вопрос / Ответ</li>
+            </ul>
+            <ul className={`${styles.footer__menu__ul} ${styles.mobile}`}>
+              <li className={styles.footer__menu__items}>
+                Расчет <br /> стоимости
+              </li>
+              <li className={styles.footer__menu__items}>Благодарность клиентов</li>
+              <li className={styles.footer__menu__items}>Услуги</li>
+              <li className={styles.footer__menu__items}>Кейсы</li>
               <li className={styles.footer__menu__items}>Виджеты</li>
               <li className={styles.footer__menu__items}>Сертификаты</li>
               <li className={styles.footer__menu__items}>Интеграции</li>
