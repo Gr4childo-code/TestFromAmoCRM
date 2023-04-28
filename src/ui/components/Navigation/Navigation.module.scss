@@ -1,0 +1,10 @@
+.navigation {
+  display: flex;
+  position: relative;
+  &__links {
+    display: flex;
+    gap: 30px;
+    color: var(--white-text);
+    font-family: var(--fonts-title);
+  }
+}

@@ -1,0 +1,104 @@
+.layout {
+  padding-top: 93px;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    .left__title {
+      font-family: 'Inter';
+      font-size: 48px;
+      line-height: 58px;
+      color: var(--white-text);
+    }
+    .left__subtitle {
+      font-family: 'Inter';
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      background: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .left__text {
+      max-width: 275px;
+      padding-top: 30px;
+      font-family: var(--fonts-text);
+      color: var(--white-text);
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    padding-top: 18px;
+    .right__title {
+      font-family: 'Inter';
+      color: var(--white-text);
+      text-align: right;
+      font-size: 18px;
+      line-height: 22px;
+      padding-bottom: 40px;
+      span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+    .right__about {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+      color: var(--white-text);
+      &__widget,
+      &__dashboard,
+      &__skype,
+      &__days {
+        text-align: right;
+        flex: 50%;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        span {
+          font-family: 'Inter';
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+      }
+
+      &__description {
+        padding-top: 6px;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+      }
+    }
+    .right__button {
+      align-self: flex-end;
+      background: #4077f3;
+      width: 262px;
+      height: 61px;
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: var(--white-text);
+      outline: none;
+      border: 0;
+    }
+  }
+}
