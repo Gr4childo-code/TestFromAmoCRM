@@ -44,6 +44,7 @@
 
 @include mq(Sphone) {
   .header {
+    z-index: 2;
     position: fixed;
     background-color: var(--background);
     padding: 0 16px;
