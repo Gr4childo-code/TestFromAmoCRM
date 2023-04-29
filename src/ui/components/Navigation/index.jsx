@@ -3,11 +3,21 @@ const Navigation = () => {
   return (
     <div className={styles.navigation}>
       <ul className={styles.navigation__links}>
-        <li>Услуги</li>
-        <li>Виджеты</li>
-        <li>Интеграции</li>
-        <li>Кейсы</li>
-        <li>Сертификаты</li>
+        <li>
+          <span>Услуги</span>
+        </li>
+        <li>
+          <span>Виджеты</span>
+        </li>
+        <li>
+          <span>Интеграции</span>
+        </li>
+        <li>
+          <span>Кейсы</span>
+        </li>
+        <li>
+          <span>Сертификаты</span>
+        </li>
       </ul>
     </div>
   );

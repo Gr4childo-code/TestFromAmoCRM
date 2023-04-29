@@ -3,12 +3,16 @@
 .navigation {
   display: flex;
   position: relative;
+  z-index: 999;
   &__links {
     display: flex;
     gap: 30px;
-    line-height: 19px;
     color: var(--white-text);
     font-family: var(--fonts-title);
+    span {
+      cursor: pointer;
+      line-height: 19px;
+    }
   }
 }
 

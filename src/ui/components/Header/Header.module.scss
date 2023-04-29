@@ -9,7 +9,10 @@
     display: flex;
     flex-direction: column;
     max-width: 140px;
+    cursor: pointer;
+
     &__text {
+      cursor: auto;
       padding-top: 10px;
       font-family: var(--fonts-text);
       font-style: normal;
@@ -37,6 +40,7 @@
       &:nth-child(2) {
         gap: 30px;
         display: flex;
+        cursor: pointer;
       }
     }
   }
