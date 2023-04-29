@@ -4,13 +4,13 @@ const Contacts = ({ ...props }) => {
       <span {...props}>+7 555 555-55-55</span>
       <ul {...props}>
         <li>
-          <img src='../../../assets/telegram.svg' alt='' />
+          <img src='/telegram.svg' alt='' />
         </li>
         <li>
-          <img src='../../../assets/viber.svg' alt='' />
+          <img src='/viber.svg' alt='' />
         </li>
         <li>
-          <img src='../../../assets/whatsapp.svg' alt='' />
+          <img src='/whatsapp.svg' alt='' />
         </li>
       </ul>
     </div>
