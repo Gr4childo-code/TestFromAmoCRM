@@ -7,7 +7,7 @@ const Header = () => {
       <div className='container'>
         <div className={styles.header__wrapper}>
           <div className={styles.header__left}>
-            <img src='/vite.svg' alt='' />
+            <img src='Logo.svg' alt='' />
             <p className={styles.header__left__text}>
               крупный интегратор CRM в Росcии и ещё 8 странах
             </p>
